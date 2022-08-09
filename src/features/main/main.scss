@@ -1,0 +1,87 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.main {
+   background-color: $bgColor;
+   min-height: 100vh;
+   overflow: hidden;
+   position: relative;
+   padding-top: 240px;
+   padding-bottom: 160px;
+   .particles {
+      position: absolute;
+      z-index: 5;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+   }
+   .container {
+      height: 100%;
+   }
+   &__columns {
+      @include flex(row, center, center, wrap);
+   }
+   &__greeting {
+      padding: 0 10px;
+      margin-bottom: 50px;
+   }
+   &__text {
+      display: block;
+      @include text(64px, "Poppins-Bold");
+      & > span {
+         display: block;
+      }
+      & :nth-child(2) {
+         padding-left: 10px;
+         margin-right: 35px;
+      }
+      & :nth-child(3) {
+         text-align: right;
+      }
+      margin-bottom: 34px;
+   }
+   &__title {
+      @include text(24px, "Roleway");
+      line-height: 34px;
+      font-weight: 500;
+      & > div {
+         display: inline;
+         margin-left: 5px;
+      }
+   }
+   &__photoBlock {
+      position: relative;
+      margin-left: 90px;
+      z-index: 10;
+      width: 430px;
+      height: 430px;
+      border: 5px solid #ff0066;
+      border-radius: 40px;
+      & > div {
+         position: absolute;
+         bottom: 15px;
+         left: 15px;
+         height: 100%;
+         width: 100%;
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         border-radius: 40px;
+      }
+   }
+}
+@media screen and (max-width: 1180px) {
+   .main {
+      &__text {
+         font-size: 34px;
+      }
+      &__photo {
+         width: 350px;
+         height: 350px;
+      }
+      // &__columns {
+      //    @include flex(column, center, center, nowrap);
+      // }
+   }
+}

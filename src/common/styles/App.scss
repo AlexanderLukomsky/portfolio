@@ -1,0 +1,22 @@
+@import "./reset";
+@import "../styles/variables.scss";
+@font-face {
+   font-family: "Roleway";
+   src: url("../assets/fonts/Roleway/Raleway-VariableFont_wght.ttf");
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.App {
+   color: $basicTextColor;
+}
+.skills {
+   border: 1px solid green;
+   background-color: red;
+}
+.skills {
+   border: 1px solid green;
+}

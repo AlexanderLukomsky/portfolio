@@ -1,0 +1,44 @@
+@import "./variables.scss";
+@mixin flex($flexDirection, $alignItems, $justifyContent, $flexWrap) {
+   display: flex;
+   flex-direction: $flexDirection;
+   justify-content: $justifyContent;
+   align-items: $alignItems;
+   flex-wrap: $flexWrap;
+}
+@mixin text($fontSize, $fontFamily) {
+   color: $basicTextColor;
+   font-size: $fontSize;
+   font-family: $fontFamily, serif;
+}
+
+$list: (
+   "Black",
+   "BlackItalic",
+   "Bold",
+   "BoldItalic",
+   "ExtraBold",
+   "ExtraBoldItalic",
+   "ExtraLight",
+   "ExtraLightItalic",
+   "Italic",
+   "Light",
+   "LightItalic",
+   "Medium",
+   "MediumItalic",
+   "Regular",
+   "SemiBold",
+   "SemiBoldItalic",
+   "Thin",
+   "ThinItalic"
+);
+
+@mixin setRobotoFonts {
+   @each $i in $list {
+      @font-face {
+         font-family: "Poppins-#{$i}";
+         src: url("../assets/fonts/Poppins/Poppins-#{$i}.ttf");
+      }
+   }
+}
+@include setRobotoFonts();

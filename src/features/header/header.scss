@@ -1,0 +1,33 @@
+@import "../../common/styles/mixins.scss";
+@import "../../common/styles/variables.scss";
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: transparent;
+   z-index: 1000;
+   padding: 30px 0;
+   border-bottom: 1px solid #505050;
+   .container {
+      max-width: 960px;
+   }
+   &__list {
+      @include flex(row, stretch, right, nowrap);
+   }
+   &__item {
+      line-height: 26px;
+      margin-left: 15px;
+      a {
+         display: inline-block;
+         @include text(16px, "Roleway");
+         font-weight: 400;
+         padding: 17px 5px 18px;
+         text-transform: capitalize;
+         &:hover {
+            color: #ff0066;
+         }
+      }
+   }
+}
