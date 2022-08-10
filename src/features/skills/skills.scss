@@ -1,0 +1,32 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.skills {
+   background-color: $secondBgColor;
+   padding: $blockPadding;
+   .title {
+      margin-bottom: $titleMarginBottom;
+   }
+   &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 45px;
+   }
+   &__item {
+      margin: 0 auto;
+      @include flex(column, center, center, nowrap);
+   }
+   &__img {
+      transform: rotate(45deg);
+      background-color: rgba(36, 36, 38, 0.3);
+      padding: 15px;
+      overflow: hidden;
+      img {
+         transform: rotate(-45deg);
+      }
+   }
+   &__title {
+      @include text(22px, "Poppins-Bold");
+      font-weight: 600;
+      margin-top: 26px;
+   }
+}

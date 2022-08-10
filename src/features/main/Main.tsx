@@ -15,7 +15,6 @@ export const Main = () => {
                      <span className="main__text">
                         <span> Hey,</span>
                         <span>I’m Alexander</span>
-                        <span>Lukomsky</span>
                      </span>
                      <h1 className="main__title">
                         Frontend

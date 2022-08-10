@@ -1,0 +1,22 @@
+@import "../../common/styles/mixins.scss";
+@import "../../common/styles/variables.scss";
+.title {
+   position: relative;
+   padding-bottom: 19px;
+   @include text(48px, "Poppins-Bold");
+   text-transform: capitalize;
+   letter-spacing: 0.7;
+   line-height: 1.4;
+   text-align: center;
+   &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 5px;
+      background-color: $accentColor;
+      margin: 19px auto 0;
+   }
+}

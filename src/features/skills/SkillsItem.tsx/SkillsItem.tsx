@@ -1,12 +1,16 @@
 import { ItemLi } from "../../../components/item/ItemLi"
-
+import Tilt from 'react-parallax-tilt';
 export const SkillsItem: React.FC<PropsType> = (
    { logoImg, text }
 ) => {
    return (
       <ItemLi className="skills__item"  >
-         <div><img src={logoImg} alt={`${text} logo`} /></div>
-         <span>{text}</span>
+         <div className="skills__img">
+            <Tilt>
+               <img src={logoImg} alt={`${text} logo`} />
+            </Tilt>
+         </div>
+         <h3 className="skills__title">{text}</h3>
       </ItemLi>
    )
 }

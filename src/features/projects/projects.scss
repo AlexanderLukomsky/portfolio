@@ -1,0 +1,8 @@
+@import "./projectsSlider/projectsSlider.scss";
+@import "../../common/styles/variables.scss";
+.projects {
+   padding: $blockPadding;
+   .title {
+      margin-bottom: $titleMarginBottom;
+   }
+}
