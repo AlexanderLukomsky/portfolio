@@ -1,7 +1,7 @@
-import { ParticlesContainer } from "../../components/item/Particles/ParticlesContainer";
-import { particlesOption } from "../../components/item/Particles/particlesOption";
 import Tilt from 'react-parallax-tilt';
 import Typewriter from 'typewriter-effect';
+import { ParticlesContainer } from '../../components/Particles/ParticlesContainer';
+import { particlesOption } from '../../components/Particles/particlesOption';
 import "./main.scss";
 
 export const Main = () => {

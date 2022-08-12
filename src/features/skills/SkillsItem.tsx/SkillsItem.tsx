@@ -1,4 +1,4 @@
-import { ItemLi } from "../../../components/item/ItemLi"
+import { ItemLi } from "../../../components/ItemLI/ItemLi"
 import Tilt from 'react-parallax-tilt';
 export const SkillsItem: React.FC<PropsType> = (
    { logoImg, text }

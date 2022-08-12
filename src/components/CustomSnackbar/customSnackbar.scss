@@ -1,0 +1,19 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.custom-snackbar {
+   & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+      .MuiAlert-action {
+         padding: 0;
+      }
+   }
+   &__text {
+      display: inline-block;
+      padding: 10px;
+      @include text(16px, "Poppins-Regular");
+      text-transform: none;
+   }
+}

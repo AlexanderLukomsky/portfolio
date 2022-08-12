@@ -1,0 +1,44 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.hire {
+   background-color: $secondBgColor;
+   .blockTitle {
+      margin-bottom: 70px;
+   }
+   &__container {
+      max-width: 800px;
+      margin: 0 auto;
+   }
+   &__form {
+      position: relative;
+      @include flex(column, center, center, nowrap);
+   }
+   &__column {
+      width: 100%;
+      @include flex(column, center, center, nowrap);
+   }
+   &__item {
+      position: relative;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 15px;
+      .custom-input {
+         padding: 10px 0;
+      }
+      input {
+         font-size: 16px;
+      }
+      textarea {
+         height: 200px;
+      }
+      padding-bottom: 20px;
+   }
+   &__error {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      color: $accentColor;
+      font-size: 12px;
+      font-family: "Poppins-Regular", sans-serif;
+   }
+}

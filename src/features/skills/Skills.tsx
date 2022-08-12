@@ -1,11 +1,11 @@
 import { SkillsItem } from "./SkillsItem.tsx/SkillsItem";
 import "./skills.scss";
-import { Title } from "../../components/title/Title";
+import { Title } from "../../components/Title/Title";
 import { useAppSelector } from "../../store/store";
 export const Skills = () => {
    const skills = useAppSelector(state => state.app.skills)
    return (
-      <section className="skills" id="skills">
+      <section className="skills blockPadding" id="skills">
          <div className="container">
             <Title text='my skills' />
             <ul className="skills__list">

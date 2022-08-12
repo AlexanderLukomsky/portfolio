@@ -1,8 +1,30 @@
-@import "./projectsSlider/projectsSlider.scss";
 @import "../../common/styles/variables.scss";
 .projects {
-   padding: $blockPadding;
-   .title {
-      margin-bottom: $titleMarginBottom;
+   &__slider {
+      .slider {
+         &__item {
+            overflow: hidden;
+            padding: 5px;
+         }
+         &__img {
+            position: relative;
+            overflow: hidden;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 370px;
+            height: 370px;
+            cursor: pointer;
+         }
+      }
+      > div {
+         ul.indicators {
+            .each-slideshow-indicator {
+               &::before {
+                  background-color: $basicTextColor;
+               }
+            }
+         }
+      }
    }
 }

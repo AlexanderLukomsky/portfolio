@@ -2,10 +2,6 @@
 @import "../../common/styles/mixins.scss";
 .skills {
    background-color: $secondBgColor;
-   padding: $blockPadding;
-   .title {
-      margin-bottom: $titleMarginBottom;
-   }
    &__list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

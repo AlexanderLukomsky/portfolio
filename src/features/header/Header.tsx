@@ -1,4 +1,4 @@
-import { ItemLi } from "../../components/item/ItemLi"
+import { ItemLi } from "../../components/ItemLI/ItemLi"
 import "./header.scss";
 export const Header = () => {
    return (

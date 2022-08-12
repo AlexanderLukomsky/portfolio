@@ -1,0 +1,43 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.custom-btn {
+   position: relative;
+   max-width: 200px;
+   width: 100%;
+   border-radius: 6px;
+   padding: 20px;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   @include text(14px, "Roleway");
+   font-weight: 600;
+   background-color: transparent;
+   overflow: hidden;
+   height: 56px;
+   &__text {
+      position: relative;
+      z-index: 10;
+   }
+   &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background-color: $accentColor;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      transition: all ease-in 0.3s;
+   }
+   &:not(:disabled):hover::after {
+      height: 100%;
+      transition: all ease-in 0.3s;
+   }
+   &:not(:disabled):active {
+      font-size: 12px;
+      left: -1px;
+      bottom: -1px;
+   }
+   &:disabled {
+      opacity: 0.5;
+   }
+}

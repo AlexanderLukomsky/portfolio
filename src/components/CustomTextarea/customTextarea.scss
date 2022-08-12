@@ -1,0 +1,56 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.custom-textarea {
+   width: 100%;
+   &__wrapper {
+      display: inline-block;
+      position: relative;
+      background-color: $bgColor;
+      width: 100%;
+      height: fit-content;
+      border: 1px solid transparent;
+      transition: all ease-in 0.3s;
+      &.active {
+         border: 1px solid $bgColor;
+         transition: all ease-in 0.3s;
+         .custom-textarea__label {
+            top: -13px;
+            transition: all ease-in 0.3s;
+            border-bottom: 1px solid $accentColor;
+         }
+      }
+      &.error {
+         border: 1px solid $accentColor;
+         transition: all ease-in 0.3s;
+         .custom-textarea__label {
+            color: $accentColor;
+         }
+      }
+   }
+   &__label {
+      @include text(14px, "Poppins-Light");
+      opacity: 0.9;
+      position: absolute;
+      top: 15px;
+      transform: translateY(-50%);
+      left: 10px;
+      z-index: 10;
+      color: #fff;
+      transition: all ease-in 0.3s;
+      padding-bottom: 2px;
+      &.filled {
+         opacity: 0;
+      }
+   }
+   &__textarea {
+      width: 100%;
+      height: 100%;
+      @include text(16px, "Poppins-Regular");
+      position: relative;
+      background-color: transparent;
+      padding: 10px;
+      z-index: 20;
+      color: #fff;
+      resize: none;
+   }
+}

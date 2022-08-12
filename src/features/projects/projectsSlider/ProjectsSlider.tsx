@@ -1,4 +1,4 @@
-import { Slider } from "../../../components/slider/Slider"
+import { Slider } from "../../../components/Slider/Slider"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { IconButton } from "@mui/material";

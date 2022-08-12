@@ -1,6 +1,6 @@
 @import "../../common/styles/mixins.scss";
 @import "../../common/styles/variables.scss";
-.title {
+.blockTitle {
    position: relative;
    padding-bottom: 19px;
    @include text(48px, "Poppins-Bold");

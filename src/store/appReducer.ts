@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { AppThunk } from './store';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import reactLogo from "../common/assets/skillsImg/reactLogo.svg";
 import tsLogo from "../common/assets/skillsImg/tsLogo.svg";
 import reduxLogo from "../common/assets/skillsImg/reduxLogo.svg";
@@ -6,6 +7,8 @@ import jsLogo from "../common/assets/skillsImg/jsLogo.svg";
 import sassLogo from "../common/assets/skillsImg/sassLogo.svg";
 import htmlLogo from "../common/assets/skillsImg/htmlLogo.svg";
 import { v1 } from "uuid";
+import { formAPI, FormDataType } from "../api/form-api";
+
 const initState = {
    skills: [
       { skill: 'React', img: reactLogo, id: v1() },
@@ -26,15 +29,62 @@ const initState = {
          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6V1WYJU4ox2L8sXZFbAk7A2uaGstLAb6sWQ&usqp=CAU'
       },
    ],
-   contacts: {}
+   formState: {
+      formStatus: 'idle' as StatusesType,
+      formData: {
+         name: '',
+         email: '',
+         message: ''
+      }
+   },
+   contacts: {},
+   appNoticeState: {
+      appNotice: '',
+      isError: false
+   }
 }
 const slice = createSlice({
    name: 'app',
    initialState: initState,
    reducers: {
-      app: () => {
-
+      setAppNotice(state, action: PayloadAction<{ appNotice: string, isError: boolean }>) { state.appNoticeState = action.payload },
+      setFormName(state, action: PayloadAction<{ name: string }>) { state.formState.formData.name = action.payload.name },
+      setFormEmail(state, action: PayloadAction<{ email: string }>) { state.formState.formData.email = action.payload.email },
+      setFormMessage(state, action: PayloadAction<{ message: string }>) { state.formState.formData.message = action.payload.message },
+      setFormStatus(state, action: PayloadAction<{ status: StatusesType }>) { state.formState.formStatus = action.payload.status },
+      setFormSubmitResultState(state, action: PayloadAction<SetAppStateStatus>) {
+         state.formState.formStatus = action.payload.formStatus
+         state.appNoticeState.appNotice = action.payload.appNotice
+         state.appNoticeState.isError = action.payload.isError
+         state.formState.formData = action.payload.formData ? action.payload.formData : state.formState.formData
       }
    }
 })
+export const { setAppNotice, setFormName, setFormEmail, setFormMessage, setFormSubmitResultState } = slice.actions
+
+export const submitForm = (formData: FormDataType): AppThunk => async (dispatch) => {
+   dispatch(slice.actions.setFormStatus({ status: 'pending' }))
+   try {
+      await formAPI.sendForm(formData)
+      dispatch(
+         setFormSubmitResultState({
+            formData: { name: '', email: '', message: '' },
+            formStatus: 'idle', appNotice: 'Message sent successfully', isError: false
+         })
+      )
+   } catch (e) {
+      dispatch(
+         setFormSubmitResultState({
+            formStatus: 'idle', appNotice: 'An unexpected error occurred, please try again', isError: true
+         })
+      )
+   }
+}
 export const appReducer = slice.reducer
+type StatusesType = 'idle' | 'pending' | 'succeeded' | 'failed'
+type SetAppStateStatus = {
+   formStatus: StatusesType
+   appNotice: string
+   isError: boolean,
+   formData?: { name: '', email: '', message: '' }
+}
