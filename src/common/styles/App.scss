@@ -40,3 +40,13 @@ select:-webkit-autofill:focus {
       rgba(0, 174, 255, 0.03) 100%
    );
 }
+@media screen and (max-width: 990px) {
+   .App {
+      .blockPadding {
+         padding: 100px 0;
+      }
+   }
+   .container {
+      max-width: 800px;
+   }
+}

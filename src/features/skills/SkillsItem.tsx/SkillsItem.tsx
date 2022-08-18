@@ -6,9 +6,11 @@ export const SkillsItem: React.FC<PropsType> = (
    return (
       <ItemLi className="skills__item"  >
          <div className="skills__img">
+
             <Tilt>
                <img src={logoImg} alt={`${text} logo`} />
             </Tilt>
+
          </div>
          <h3 className="skills__title">{text}</h3>
 

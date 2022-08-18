@@ -1,0 +1,41 @@
+@import "../../../common/styles/mixins.scss";
+@import "../../../common/styles/variables.scss";
+.header-burger-nav {
+   position: relative;
+   display: none;
+   &__btn {
+      width: 40px;
+      height: 40px;
+      background-color: $accentColor;
+      margin-left: auto;
+   }
+   &__list {
+      @include flex(column, center, center, nowrap);
+      position: absolute;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -400px;
+      :not(:last-child):nth-child(n) {
+         margin-bottom: 10px;
+      }
+      transition: all ease-in 0.3s;
+      .header__nav-item {
+         text-align: center;
+         a {
+            padding: 10px 5px;
+         }
+      }
+      background-color: $bgColor;
+   }
+
+   &.open {
+      .header-burger-nav__list {
+         left: 50%;
+         transform: translateX(-50%);
+         top: 70px;
+      }
+   }
+}

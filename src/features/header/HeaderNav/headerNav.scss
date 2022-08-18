@@ -1,0 +1,14 @@
+@import "../../../common/styles/mixins.scss";
+.header-nav {
+   display: block;
+   &__list {
+      @include flex(row, stretch, right, nowrap);
+      margin-right: 30px;
+      .header__nav-item {
+         margin-left: 15px;
+         a {
+            padding: 17px 5px 18px;
+         }
+      }
+   }
+}

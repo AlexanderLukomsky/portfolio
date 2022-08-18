@@ -3,7 +3,25 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { IconButton } from "@mui/material";
 import { useAppSelector } from "../../../store/store";
+import { useEffect, useState } from "react";
 export const ProjectsSlider = () => {
+   const [slideCount, setSlideCount] = useState(3)
+   const windowResizeHandler = () => {
+      if (window.innerWidth <= 767) {
+         setSlideCount(1)
+      } else {
+         setSlideCount(3)
+      }
+   }
+   useEffect(() => {
+      window.addEventListener('resize', windowResizeHandler)
+      if (window.innerWidth <= 767) {
+         setSlideCount(1)
+      } else {
+         setSlideCount(3)
+      }
+      return () => { window.removeEventListener('resize', windowResizeHandler) }
+   }, [])
    const projects = useAppSelector(state => state.app.projects)
    const buttonStyle = {
       width: '40px',
@@ -29,7 +47,7 @@ export const ProjectsSlider = () => {
       <div className="projects__slider">
          <Slider
             array={projects}
-            slidesToShow={3}
+            slidesToShow={slideCount}
             slidesToScroll={1}
             autoplay={true}
             indicators={true}

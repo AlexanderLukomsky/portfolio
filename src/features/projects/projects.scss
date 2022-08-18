@@ -28,3 +28,29 @@
       }
    }
 }
+@media screen and (max-width: 990px) {
+   .projects {
+      &__slider {
+         .slider {
+            &__img {
+               width: 300px;
+               height: 300px;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .projects {
+      &__slider {
+         max-width: 600px;
+         width: 100%;
+         margin: 0 auto;
+         .slider {
+            &__img {
+               width: 100%;
+            }
+         }
+      }
+   }
+}
