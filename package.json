@@ -1,4 +1,5 @@
 {
+  "homepage": "https://AlexanderLukomsky.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -12,12 +13,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "@types/gh-pages": "^3.2.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-scroll": "^1.8.4",
     "@types/uuid": "^8.3.4",
+    "gh-pages": "^4.0.0",
     "intersection-observer": "^0.12.2",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.0.0",
@@ -41,7 +44,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
