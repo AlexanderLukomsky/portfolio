@@ -41,7 +41,8 @@ const initState = {
    appNoticeState: {
       appNotice: '',
       isError: false
-   }
+   },
+   isShowScrollElem: false
 }
 const slice = createSlice({
    name: 'app',
@@ -52,6 +53,7 @@ const slice = createSlice({
       setFormEmail(state, action: PayloadAction<{ email: string }>) { state.formState.formData.email = action.payload.email },
       setFormMessage(state, action: PayloadAction<{ message: string }>) { state.formState.formData.message = action.payload.message },
       setFormStatus(state, action: PayloadAction<{ status: StatusesType }>) { state.formState.formStatus = action.payload.status },
+      setIsShowScrollElem(state, action: PayloadAction<{ isShowScrollElem: boolean }>) { state.isShowScrollElem = action.payload.isShowScrollElem },
       setFormSubmitResultState(state, action: PayloadAction<SetAppStateStatus>) {
          state.formState.formStatus = action.payload.formStatus
          state.appNoticeState.appNotice = action.payload.appNotice
@@ -60,7 +62,7 @@ const slice = createSlice({
       }
    }
 })
-export const { setAppNotice, setFormName, setFormEmail, setFormMessage, setFormSubmitResultState } = slice.actions
+export const { setAppNotice, setFormName, setFormEmail, setFormMessage, setFormSubmitResultState, setIsShowScrollElem } = slice.actions
 
 export const submitForm = (formData: FormDataType): AppThunk => async (dispatch) => {
    dispatch(slice.actions.setFormStatus({ status: 'pending' }))

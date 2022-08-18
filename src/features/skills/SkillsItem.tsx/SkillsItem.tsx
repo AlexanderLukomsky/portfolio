@@ -11,6 +11,7 @@ export const SkillsItem: React.FC<PropsType> = (
             </Tilt>
          </div>
          <h3 className="skills__title">{text}</h3>
+
       </ItemLi>
    )
 }

@@ -1,18 +1,21 @@
-import { ItemLi } from "../../components/ItemLI/ItemLi"
+import React from "react";
+import { useAppSelector } from "../../store/store";
 import "./header.scss";
-export const Header = () => {
+import { HeaderItem } from "./HeaderItem/HeaderItem";
+export const Header = React.memo(() => {
+   const isShowScrollElem = useAppSelector(state => state.app.isShowScrollElem)
    return (
-      <header className='header' id="header">
+      <header className={`header ${isShowScrollElem ? 'scroll' : ''}`} id="header">
          <div className="container">
             <nav className="header__nav">
                <ul className="header__list">
-                  <ItemLi className="header__item"><a href="#main">Main</a></ItemLi>
-                  <ItemLi className="header__item"><a href="#skills">Skills</a></ItemLi>
-                  <ItemLi className="header__item"><a href="#projects">Projects</a></ItemLi>
-                  <ItemLi className="header__item"><a href="#contacts">Contacts</a></ItemLi>
+                  <HeaderItem linkTo="main" title={'Main'} />
+                  <HeaderItem linkTo="skills" title={'Skills'} />
+                  <HeaderItem linkTo="projects" title={'Projects'} />
+                  <HeaderItem linkTo="hire" title={'Contacts'} />
                </ul>
             </nav>
          </div>
       </header>
    )
-} 
+})

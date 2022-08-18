@@ -26,8 +26,14 @@
          padding: 17px 5px 18px;
          text-transform: capitalize;
          &:hover {
-            color: #ff0066;
+            color: #a30041;
          }
       }
+      .active {
+         color: #ff0066;
+      }
+   }
+   &.scroll {
+      background-color: $bgColor;
    }
 }

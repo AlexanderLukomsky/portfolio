@@ -1,0 +1,27 @@
+@import "../../common/styles/variables.scss";
+.scroll-btn {
+   position: relative;
+   width: 0;
+   height: 0;
+   z-index: 1001;
+   bottom: 0;
+   opacity: 0;
+   & > button {
+      background-color: $secondBgColor;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      color: #fff;
+      border: 2px solid #505050;
+      border-radius: 5px;
+      padding: 5px;
+      & > svg {
+         width: 35px;
+         height: 35px;
+      }
+   }
+   &.show {
+      opacity: 1;
+   }
+   transition: all ease-in 0.4s;
+}
