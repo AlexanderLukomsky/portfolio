@@ -1,14 +1,11 @@
 import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css'
+import { SliderItem } from "./SliderItem"
 export const Slider: React.FC<PropsType> = ({ array, properties, onDoubleClick, ...props }) => {
    return (
-      <Slide {...props} canSwipe cssClass="slider" {...properties} duration={3000}>
+      <Slide {...props} cssClass="slider-items" {...properties} duration={4000}>
          {array.map((slide, index) => (
-            <div className="slider__item" key={index}
-               onDoubleClick={() => { onDoubleClick && onDoubleClick('https://github.com/AlexanderLukomsky?tab=repositories') }}
-            >
-               <div className="slider__img" style={{ backgroundImage: `url(${slide.img})` }}></div>
-            </div>
+            <SliderItem img={slide.img} key={index} onDoubleClick={onDoubleClick} src={slide.src} />
          ))
          }
       </Slide >
@@ -17,7 +14,9 @@ export const Slider: React.FC<PropsType> = ({ array, properties, onDoubleClick, 
 type PropsType = {
    array: {
       img: string
+      src?: string
    }[]
+   canSwipe?: boolean
    slidesToShow?: number
    slidesToScroll?: number
    autoplay?: boolean

@@ -5,20 +5,26 @@ import { IconButton } from "@mui/material";
 import { useAppSelector } from "../../../store/store";
 import { useEffect, useState } from "react";
 export const ProjectsSlider = () => {
-   const [slideCount, setSlideCount] = useState(3)
+
+   const [slideCount, setSlideCount] = useState(2)
+   const [canSwipe, setCanSwipe] = useState(false)
    const windowResizeHandler = () => {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth <= 990) {
          setSlideCount(1)
       } else {
-         setSlideCount(3)
+         setSlideCount(2)
       }
    }
    useEffect(() => {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+         .test(navigator.userAgent)) {
+         setCanSwipe(true)
+      }
       window.addEventListener('resize', windowResizeHandler)
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth <= 990) {
          setSlideCount(1)
       } else {
-         setSlideCount(3)
+         setSlideCount(2)
       }
       return () => { window.removeEventListener('resize', windowResizeHandler) }
    }, [])
@@ -55,6 +61,7 @@ export const ProjectsSlider = () => {
             infinite={true}
             properties={properties}
             onDoubleClick={onDoubleClickHandler}
+            canSwipe={canSwipe}
          />
       </div>
    )

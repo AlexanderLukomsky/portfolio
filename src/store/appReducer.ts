@@ -8,6 +8,8 @@ import sassLogo from "../common/assets/skillsImg/sassLogo.svg";
 import htmlLogo from "../common/assets/skillsImg/htmlLogo.svg";
 import { v1 } from "uuid";
 import { formAPI, FormDataType } from "../api/form-api";
+import cards from "../common/assets/projectsImg/cards.jpg"
+import gitRepo from "../common/assets/projectsImg/gitRepo.png"
 
 const initState = {
    skills: [
@@ -20,13 +22,11 @@ const initState = {
    ],
    projects: [
       {
-         img: 'https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg'
+         img: cards
       },
       {
-         img: 'https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg'
-      },
-      {
-         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6V1WYJU4ox2L8sXZFbAk7A2uaGstLAb6sWQ&usqp=CAU'
+         img: gitRepo,
+         src: 'https://github.com/AlexanderLukomsky?tab=repositories'
       },
    ],
    formState: {
