@@ -1,13 +1,15 @@
 import React, { useCallback, useEffect, useState } from "react"
-export const SliderItem: React.FC<PropsType> = React.memo(({ img, onDoubleClick, src }) => {
+export const SliderItem: React.FC<PropsType> = React.memo(({ img, onDoubleClick, srcImg }) => {
    const [clickCount, setClickCount] = useState(0)
    const onDoubleClickHandler = useCallback(() => {
-      onDoubleClick && onDoubleClick(src ? src : 'https://alexanderlukomsky.github.io/portfolio/')
-   }, [onDoubleClick, src])
+      setClickCount(0)
+      onDoubleClick && onDoubleClick(srcImg ? srcImg : 'https://alexanderlukomsky.github.io/portfolio/')
+   }, [onDoubleClick, srcImg])
    useEffect(() => {
       const id = setTimeout(() => {
          if (clickCount === 2) {
             onDoubleClickHandler()
+            setClickCount(0)
          }
          setClickCount(0)
       }, 500)
@@ -17,6 +19,7 @@ export const SliderItem: React.FC<PropsType> = React.memo(({ img, onDoubleClick,
    }, [clickCount, onDoubleClickHandler])
 
    const onClickHandler = () => {
+      console.log(srcImg);
       setClickCount(click => click + 1)
    }
    return (
@@ -31,6 +34,6 @@ export const SliderItem: React.FC<PropsType> = React.memo(({ img, onDoubleClick,
 })
 type PropsType = {
    img: string
-   src?: string
+   srcImg?: string
    onDoubleClick?: (url: string) => void
 }

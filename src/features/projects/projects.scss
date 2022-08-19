@@ -2,8 +2,9 @@
 .projects {
    &__slider {
       .slider-items {
-         position: relative;
          &__item {
+            position: relative;
+            overflow: hidden;
             padding: 5px;
             height: 300px;
             width: 100%;
