@@ -2,7 +2,6 @@ import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css'
 import { SliderItem } from "./SliderItem"
 export const Slider: React.FC<PropsType> = ({ array, properties, onDoubleClick, ...props }) => {
-   console.log(array);
    return (
       <Slide {...props} cssClass="slider-items" {...properties} duration={4000}>
          {array.map((slide, index) => (
