@@ -22,7 +22,8 @@ const initState = {
    ],
    projects: [
       {
-         img: cards
+         img: cards,
+         src: 'https://alexanderlukomsky.github.io/cards/'
       },
       {
          img: gitRepo,
