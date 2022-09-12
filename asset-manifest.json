@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ffb3cc0d.css",
-    "main.js": "/portfolio/static/js/main.6aa746a2.js",
+    "main.js": "/portfolio/static/js/main.5df706ec.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/cards.jpg": "/portfolio/static/media/cards.1f21a414f9d05fb766ed.jpg",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.ffb3cc0d.css",
-    "static/js/main.6aa746a2.js"
+    "static/js/main.5df706ec.js"
   ]
 }
