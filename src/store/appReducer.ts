@@ -10,6 +10,7 @@ import { v1 } from "uuid";
 import { formAPI, FormDataType } from "../api/form-api";
 import cards from "../common/assets/projectsImg/cards.jpg"
 import gitRepo from "../common/assets/projectsImg/gitRepo.png"
+import todolist from "../common/assets/projectsImg/todolist.png"
 
 const initState = {
    skills: [
@@ -28,6 +29,10 @@ const initState = {
       {
          img: gitRepo,
          src: 'https://github.com/AlexanderLukomsky?tab=repositories'
+      },
+      {
+         img: todolist,
+         src: 'https://alexanderlukomsky.github.io/tlist-hw/#/todolists'
       },
    ],
    formState: {
