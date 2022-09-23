@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ffb3cc0d.css",
-    "main.js": "/portfolio/static/js/main.b1a7f712.js",
+    "main.js": "/portfolio/static/js/main.e4ddecbe.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/cards.jpg": "/portfolio/static/media/cards.1f21a414f9d05fb766ed.jpg",
@@ -23,8 +23,6 @@
     "static/media/Poppins-Bold.ttf": "/portfolio/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/portfolio/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/Poppins-Black.ttf": "/portfolio/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
-    "static/media/gitRepo.png": "/portfolio/static/media/gitRepo.ba181c82ae4689fba9a1.png",
-    "static/media/todolist.png": "/portfolio/static/media/todolist.83ff3f604dd9831f5ed9.png",
     "static/media/sassLogo.svg": "/portfolio/static/media/sassLogo.af5159317e27bc0070306817262d2871.svg",
     "static/media/reduxLogo.svg": "/portfolio/static/media/reduxLogo.194dc5e00476c38bc779b06192c4cab9.svg",
     "static/media/reactLogo.svg": "/portfolio/static/media/reactLogo.6c1d44b8c59f0f72ff199a54ceed774c.svg",
@@ -35,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.ffb3cc0d.css",
-    "static/js/main.b1a7f712.js"
+    "static/js/main.e4ddecbe.js"
   ]
 }
