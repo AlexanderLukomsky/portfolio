@@ -22,6 +22,19 @@
             z-index: 1;
             cursor: pointer;
          }
+         &__link {
+            font-size: 16px;
+            position: absolute;
+            z-index: 1000;
+            color: red;
+            padding: 5px;
+            border: 1px solid $accentColor;
+            border-radius: 3px;
+            margin: 3px;
+            text-transform: capitalize;
+            color: $basicTextColor;
+            background-color: $bgColor;
+         }
       }
       > div {
          ul.indicators {
