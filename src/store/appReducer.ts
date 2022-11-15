@@ -22,14 +22,14 @@ const initState = {
       { skill: 'SASS', img: htmlLogo, id: v1() },
    ],
    projects: [
-      {
-         img: cards,
-         src: 'https://alexanderlukomsky.github.io/cards/'
-      },
-      {
-         img: gitRepo,
-         src: 'https://github.com/AlexanderLukomsky?tab=repositories'
-      },
+      // {
+      //    img: cards,
+      //    src: 'https://alexanderlukomsky.github.io/cards/'
+      // },
+      // {
+      //    img: gitRepo,
+      //    src: 'https://github.com/AlexanderLukomsky?tab=repositories'
+      // },
       {
          img: todolist,
          src: 'https://alexanderlukomsky.github.io/tlist-hw/#/todolists'
