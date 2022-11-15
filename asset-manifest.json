@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7a014594.css",
-    "main.js": "/portfolio/static/js/main.c9604577.js",
+    "main.css": "/portfolio/static/css/main.a6df1dc8.css",
+    "main.js": "/portfolio/static/js/main.0a31bba1.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/Poppins-ThinItalic.ttf": "/portfolio/static/media/Poppins-ThinItalic.9d5e661e645ce9a32fe6.ttf",
@@ -33,7 +33,7 @@
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.7a014594.css",
-    "static/js/main.c9604577.js"
+    "static/css/main.a6df1dc8.css",
+    "static/js/main.0a31bba1.js"
   ]
 }
