@@ -54,7 +54,7 @@
       max-width: 430px;
       height: 542px;
       width: 100%;
-      border: 5px solid #00473e;
+      border: 5px solid $secondAccentColor;
       border-radius: 40px;
       & > div {
          position: absolute;
@@ -62,11 +62,39 @@
          left: 15px;
          height: 100%;
          width: 100%;
+         border-radius: 40px;
+         overflow: hidden;
       }
       img {
+         cursor: pointer;
          width: 100%;
          height: 100%;
          border-radius: 40px;
+      }
+   }
+   .photo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+   }
+   .photo-link {
+      position: relative;
+      z-index: 1000;
+      margin: 10px;
+      padding: 10px;
+      font-size: 24px;
+      border: 1px solid $secondAccentColor;
+      border-radius: 4px;
+      color: $basicTextColor;
+      &:hover {
+         border-color: $accentColor;
       }
    }
 }

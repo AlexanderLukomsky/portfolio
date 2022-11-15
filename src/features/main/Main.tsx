@@ -1,11 +1,22 @@
+import { useState, MouseEvent } from "react";
 import Tilt from "react-parallax-tilt";
 import Typewriter from "typewriter-effect";
 import { ParticlesContainer } from "../../components/Particles/ParticlesContainer";
 import { particlesOption } from "../../components/Particles/particlesOption";
 import photo from "../../common/assets/photo/photo.jpg";
 import "./main.scss";
+import { useSelector } from "react-redux";
+import { selectLinkCV } from "../../utils";
 
 export const Main = () => {
+  const linkToCv = useSelector(selectLinkCV);
+  const [isClickedPhoto, setIsClickedPhoto] = useState(false);
+  const onPhotoClick = () => {
+    setIsClickedPhoto(true);
+  };
+  const onLinkClick = () => {
+    setIsClickedPhoto(false);
+  };
   return (
     <>
       <section className="main" id="main">
@@ -29,8 +40,21 @@ export const Main = () => {
               </h1>
             </div>
             <div className="main__photoBlock">
-              <Tilt>
-                <img src={photo} alt="" />
+              <Tilt tiltEnable={!isClickedPhoto}>
+                <img src={photo} alt="Alexander" onClick={onPhotoClick} />
+                {isClickedPhoto && (
+                  <div className="photo-overlay" onClick={onLinkClick}>
+                    <a
+                      className="photo-link"
+                      href={linkToCv}
+                      target={"_blank"}
+                      rel="noreferrer"
+                      onClick={onLinkClick}
+                    >
+                      Link to CV
+                    </a>
+                  </div>
+                )}
               </Tilt>
             </div>
           </div>
