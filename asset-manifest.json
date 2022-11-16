@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.efd0945c.css",
-    "main.js": "/portfolio/static/js/main.b189da96.js",
+    "main.js": "/portfolio/static/js/main.93ea7b41.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
+    "static/media/onlineZoo.png": "/portfolio/static/media/onlineZoo.d4a74dba58a028551ca1.png",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
     "static/media/Poppins-ThinItalic.ttf": "/portfolio/static/media/Poppins-ThinItalic.9d5e661e645ce9a32fe6.ttf",
     "static/media/Poppins-ExtraLightItalic.ttf": "/portfolio/static/media/Poppins-ExtraLightItalic.dbdfd398abcbbafc022b.ttf",
@@ -35,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.efd0945c.css",
-    "static/js/main.b189da96.js"
+    "static/js/main.93ea7b41.js"
   ]
 }
