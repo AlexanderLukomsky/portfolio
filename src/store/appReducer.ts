@@ -7,7 +7,7 @@ import sassLogo from "../common/assets/skillsImg/sassLogo.svg";
 import htmlLogo from "../common/assets/skillsImg/htmlLogo.svg";
 import { v1 } from "uuid";
 import { formAPI, FormDataType } from "../api/form-api";
-import cards from "../common/assets/projectsImg/cards.jpg";
+import gitRepo from "../common/assets/projectsImg/gitRepo.png";
 import onlineZoo from "../common/assets/projectsImg/onlineZoo.png";
 import todolist from "../common/assets/projectsImg/todolist.png";
 import { AppThunk } from "./types";
@@ -22,17 +22,20 @@ const initState = {
     { skill: "SASS", img: htmlLogo, id: v1() },
   ],
   projects: [
-    // {
-    //    img: cards,
-    //    src: 'https://alexanderlukomsky.github.io/cards/'
-    // },
+    {
+      img: gitRepo,
+      src: "https://github.com/AlexanderLukomsky?tab=repositories",
+      title: "Link to other projects",
+    },
     {
       img: onlineZoo,
       src: "https://rolling-scopes-school.github.io/alexanderlukomsky-JSFE2022Q3/online-zoo/pages/main/",
+      title: null,
     },
     {
       img: todolist,
       src: "https://alexanderlukomsky.github.io/tlist-hw/#/todolists",
+      title: null,
     },
   ],
   formState: {

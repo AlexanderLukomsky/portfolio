@@ -1,24 +1,24 @@
+import { useSelector } from "react-redux";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { selectProjects } from "../../utils";
 import { SliderItem } from "./SliderItem";
-export const Slider: React.FC<PropsType> = ({
-  array,
-  properties,
-  ...props
-}) => {
+export const Slider: React.FC<PropsType> = ({ properties, ...props }) => {
+  const projects = useSelector(selectProjects);
   return (
     <Slide {...props} cssClass="slider-items" {...properties} duration={4000}>
-      {array.map((slide, index) => (
-        <SliderItem img={slide.img} key={index} srcImg={slide.src} />
+      {projects.map((project, index) => (
+        <SliderItem
+          title={project.title}
+          img={project.img}
+          key={index}
+          srcImg={project.src}
+        />
       ))}
     </Slide>
   );
 };
 type PropsType = {
-  array: {
-    img: string;
-    src?: string;
-  }[];
   canSwipe?: boolean;
   slidesToShow?: number;
   slidesToScroll?: number;

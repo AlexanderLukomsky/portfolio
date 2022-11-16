@@ -3,8 +3,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
-import { selectProjects } from "../../../utils";
-import { useSelector } from "react-redux";
 
 export const ProjectsSlider = () => {
   const [canSwipe, setCanSwipe] = useState(false);
@@ -17,7 +15,7 @@ export const ProjectsSlider = () => {
       setCanSwipe(true);
     }
   }, []);
-  const projects = useSelector(selectProjects);
+
   const buttonStyle = {
     width: "40px",
     height: "40px",
@@ -45,7 +43,6 @@ export const ProjectsSlider = () => {
   return (
     <div className="projects__slider">
       <Slider
-        array={projects}
         slidesToShow={1}
         slidesToScroll={1}
         autoplay={true}

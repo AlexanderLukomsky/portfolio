@@ -1,5 +1,6 @@
 import { FC, memo } from "react";
-export const SliderItem: FC<PropsType> = memo(({ img, srcImg }) => {
+import { Nullable } from "../../common/types";
+export const SliderItem: FC<PropsType> = memo(({ img, srcImg, title }) => {
   return (
     <div className="slider-items__item">
       <span className="slider-items__img-screen"></span>
@@ -9,7 +10,7 @@ export const SliderItem: FC<PropsType> = memo(({ img, srcImg }) => {
         target={"_blank"}
         rel="noreferrer"
       >
-        project link
+        {title ? title : "Project link"}
       </a>
       <img src={img} alt="portfolio-img" />
     </div>
@@ -18,4 +19,5 @@ export const SliderItem: FC<PropsType> = memo(({ img, srcImg }) => {
 type PropsType = {
   img: string;
   srcImg?: string;
+  title: Nullable<string>;
 };
