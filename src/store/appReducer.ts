@@ -11,6 +11,7 @@ import gitRepo from "../common/assets/projectsImg/gitRepo.png";
 import onlineZoo from "../common/assets/projectsImg/onlineZoo.png";
 import todolist from "../common/assets/projectsImg/todolist.png";
 import packs from "../common/assets/projectsImg/packs.png";
+import shopCart from "../common/assets/projectsImg/shopCart.png";
 import { AppThunk } from "./types";
 
 const initState = {
@@ -36,6 +37,11 @@ const initState = {
     {
       img: todolist,
       src: "https://alexanderlukomsky.github.io/tlist-hw/#/todolists",
+      title: null,
+    },
+    {
+      img: shopCart,
+      src: "https://alexanderlukomsky.github.io/shop-cart/#/products",
       title: null,
     },
     {
