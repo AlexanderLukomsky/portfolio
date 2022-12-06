@@ -10,6 +10,7 @@ import { formAPI, FormDataType } from "../api/form-api";
 import gitRepo from "../common/assets/projectsImg/gitRepo.png";
 import onlineZoo from "../common/assets/projectsImg/onlineZoo.png";
 import todolist from "../common/assets/projectsImg/todolist.png";
+import packs from "../common/assets/projectsImg/packs.png";
 import { AppThunk } from "./types";
 
 const initState = {
@@ -23,9 +24,9 @@ const initState = {
   ],
   projects: [
     {
-      img: gitRepo,
-      src: "https://github.com/AlexanderLukomsky?tab=repositories",
-      title: "Link to other projects",
+      img: packs,
+      src: "https://alexanderlukomsky.github.io/cards/#/packs",
+      title: null,
     },
     {
       img: onlineZoo,
@@ -36,6 +37,11 @@ const initState = {
       img: todolist,
       src: "https://alexanderlukomsky.github.io/tlist-hw/#/todolists",
       title: null,
+    },
+    {
+      img: gitRepo,
+      src: "https://github.com/AlexanderLukomsky?tab=repositories",
+      title: "Link to other projects",
     },
   ],
   formState: {
