@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.44edc5d8.css",
-    "main.js": "/portfolio/static/js/main.d8983bad.js",
+    "main.js": "/portfolio/static/js/main.0c5ba926.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/onlineZoo.png": "/portfolio/static/media/onlineZoo.d4a74dba58a028551ca1.png",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
@@ -23,6 +23,7 @@
     "static/media/Poppins-Bold.ttf": "/portfolio/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/portfolio/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/Poppins-Black.ttf": "/portfolio/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
+    "static/media/packs.png": "/portfolio/static/media/packs.630b554bdc10b335583a.png",
     "static/media/photo.jpg": "/portfolio/static/media/photo.3215b79aaaa50fea6cf0.jpg",
     "static/media/gitRepo.png": "/portfolio/static/media/gitRepo.c13012899eb43d9f5bd6.png",
     "static/media/todolist.png": "/portfolio/static/media/todolist.83ff3f604dd9831f5ed9.png",
@@ -37,6 +38,6 @@
   },
   "entrypoints": [
     "static/css/main.44edc5d8.css",
-    "static/js/main.d8983bad.js"
+    "static/js/main.0c5ba926.js"
   ]
 }
