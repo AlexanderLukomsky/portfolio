@@ -13,7 +13,7 @@ import todolist from "../common/assets/projectsImg/todolist.png";
 import packs from "../common/assets/projectsImg/packs.png";
 import shopCart from "../common/assets/projectsImg/shopCart.png";
 import { AppThunk } from "./types";
-
+import CV from "../common/assets/cv/CV_lv.pdf";
 const initState = {
   skills: [
     { skill: "React", img: reactLogo, id: v1() },
@@ -62,7 +62,7 @@ const initState = {
     githubLink: "https://github.com/AlexanderLukomsky",
     linkedInLink: "https://www.linkedin.com/in/alexander-lukomsky-3a6a87256",
   },
-  cv: "https://alexanderlukomsky.github.io/cv/cv",
+  cv: CV,
 
   appNoticeState: {
     appNotice: "",

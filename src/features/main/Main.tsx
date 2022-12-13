@@ -47,7 +47,6 @@ export const Main = () => {
                     <a
                       className="photo-link"
                       href={linkToCv}
-                      target={"_blank"}
                       rel="noreferrer"
                       onClick={onLinkClick}
                     >
