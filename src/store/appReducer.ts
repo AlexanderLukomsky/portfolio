@@ -9,6 +9,7 @@ import { v1 } from "uuid";
 import { formAPI, FormDataType } from "../api/form-api";
 import gitRepo from "../common/assets/projectsImg/gitRepo.png";
 import onlineZoo from "../common/assets/projectsImg/onlineZoo.png";
+import social from "../common/assets/projectsImg/social.png";
 import todolist from "../common/assets/projectsImg/todolist.png";
 import packs from "../common/assets/projectsImg/packs.png";
 import shopCart from "../common/assets/projectsImg/shopCart.png";
@@ -27,6 +28,11 @@ const initState = {
     {
       img: packs,
       src: "https://alexanderlukomsky.github.io/cards/#/packs",
+      title: null,
+    },
+    {
+      img: social,
+      src: "https://alexanderlukomsky.github.io/social-network/#/profile",
       title: null,
     },
     {
