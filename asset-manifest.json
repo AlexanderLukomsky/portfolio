@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.44edc5d8.css",
-    "main.js": "/portfolio/static/js/main.fc9347f5.js",
+    "main.js": "/portfolio/static/js/main.d2154bdc.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/onlineZoo.png": "/portfolio/static/media/onlineZoo.d4a74dba58a028551ca1.png",
     "static/media/Raleway-VariableFont_wght.ttf": "/portfolio/static/media/Raleway-VariableFont_wght.575ec9e676c7a85494bb.ttf",
@@ -21,10 +21,10 @@
     "static/media/Poppins-Medium.ttf": "/portfolio/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "/portfolio/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Poppins-Bold.ttf": "/portfolio/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
-    "static/media/CV_all.pdf": "/portfolio/static/media/CV_all.528e749aac20f73fb7c9.pdf",
+    "static/media/CV_all.pdf": "/portfolio/static/media/CV_all.d58181483b4979e00f08.pdf",
     "static/media/Poppins-ExtraBold.ttf": "/portfolio/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/Poppins-Black.ttf": "/portfolio/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
-    "static/media/CV_lv.pdf": "/portfolio/static/media/CV_lv.a06da54230eef6453536.pdf",
+    "static/media/CV_lv.pdf": "/portfolio/static/media/CV_lv.57a121b1742d939458ba.pdf",
     "static/media/shopCart.png": "/portfolio/static/media/shopCart.992eb764ba3f5e6fe04a.png",
     "static/media/packs.png": "/portfolio/static/media/packs.630b554bdc10b335583a.png",
     "static/media/social.png": "/portfolio/static/media/social.d732d30342ef5fc870b6.png",
@@ -42,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.44edc5d8.css",
-    "static/js/main.fc9347f5.js"
+    "static/js/main.d2154bdc.js"
   ]
 }
