@@ -9,11 +9,13 @@ import { Main } from "./features/main/Main";
 import { Projects } from "./features/projects/Projects";
 import { Skills } from "./features/skills/Skills";
 import { selectAppNoticeState } from "./utils";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { CV_ALL_JOBS } from "./components/cv-all/CV_ALL_JOBS";
 
-export const App = () => {
+const MainPage = () => {
   const appNoticeState = useSelector(selectAppNoticeState);
   return (
-    <div className="App">
+    <>
       <ScrollToTop />
       <Header />
       <Main />
@@ -24,6 +26,20 @@ export const App = () => {
       {!!appNoticeState.appNotice && (
         <CustomSnackbar appNoticeState={appNoticeState} />
       )}
+    </>
+  );
+};
+
+export const App = () => {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/portfolio" element={<MainPage />} />
+        <Route path="/" element={<Navigate to={"/portfolio"} />} />
+        <Route path="/*" element={<Navigate to={"/portfolio"} />} />
+
+        <Route path="/cv" element={<CV_ALL_JOBS />} />
+      </Routes>
     </div>
   );
 };
