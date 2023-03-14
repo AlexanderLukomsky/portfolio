@@ -34,9 +34,9 @@ export const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/portfolio" element={<MainPage />} />
-        <Route path="/" element={<Navigate to={"/portfolio"} />} />
-        <Route path="/*" element={<Navigate to={"/portfolio"} />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/" element={<Navigate to={"/main"} />} />
+        <Route path="/*" element={<Navigate to={"/main"} />} />
 
         <Route path="/cv" element={<CV_ALL_JOBS />} />
       </Routes>
