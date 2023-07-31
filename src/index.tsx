@@ -1,4 +1,3 @@
-import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -17,5 +16,3 @@ root.render(
     </HashRouter>
   </Provider>
 );
-
-reportWebVitals();
