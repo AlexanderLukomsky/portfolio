@@ -2,7 +2,6 @@ import { MouseEvent, useCallback, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { CustomButton } from "../../components/CustomButton/CustomButton";
 import { CircularProgressBar } from "../../components/ProgressBar/CircularProgressBar";
-import { Title } from "../../components/Title/Title";
 import { useAppDispatch } from "../../store";
 import {
   setFormEmail,
@@ -15,8 +14,10 @@ import { validate } from "../../utils/validate";
 import { FormEmail } from "./FormEmail/FormEmail";
 import { FormMessage } from "./FormMessage/FormMessage";
 import { FormName } from "./FormName/FormName";
+import { Title } from "components/title";
 
 import "./hire.scss";
+
 export const Hire = () => {
   const dispatch = useAppDispatch();
   const [disabled, setDisabled] = useState(false);

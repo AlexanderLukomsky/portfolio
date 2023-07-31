@@ -1,7 +1,7 @@
-import { Slider } from "../../../components/Slider/Slider";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { IconButton } from "@mui/material";
+import { Slider } from "components/slider";
 import { useEffect, useState } from "react";
 
 export const ProjectsSlider = () => {

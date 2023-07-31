@@ -1,10 +1,12 @@
 import { Fade } from "react-awesome-reveal";
-import "./title.scss"
+import "./title.scss";
 
+type TitleProps = {
+  text: string;
+};
 
-export const Title: React.FC<PropsType> = ({ text }) => (
-   <Fade direction={"up"}> <h2 className="blockTitle">{text}</h2></Fade>
-)
-type PropsType = {
-   text: string
-}
+export const Title = ({ text }: TitleProps) => (
+  <Fade direction={"up"}>
+    <h2 className="blockTitle">{text}</h2>
+  </Fade>
+);

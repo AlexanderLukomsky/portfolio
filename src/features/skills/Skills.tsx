@@ -1,11 +1,11 @@
 import { SkillsItem } from "./SkillsItem.tsx/SkillsItem";
-import "./skills.scss";
-import { Title } from "../../components/Title/Title";
 import { useCallback, useEffect, useRef } from "react";
 import { setIsShowScrollElem } from "../../store/appReducer";
 import { useSelector } from "react-redux";
 import { selectSkills } from "../../utils";
 import { useAppDispatch } from "../../store";
+import { Title } from "components/title";
+import "./skills.scss";
 
 export const Skills = () => {
   const skills = useSelector(selectSkills);
